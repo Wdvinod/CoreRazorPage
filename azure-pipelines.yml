@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-2019'
+  vmImage: 'windows-latest'
 
 variables:
   solution: '**/*.sln'
@@ -15,8 +15,8 @@ variables:
   buildConfiguration: 'Release'
   package-version: '1.2.6'
   dotNetFramework: 'net3.1'
-  dotNetVersion: '3.x'
-  targetRuntime: 'win-x64'
+  dotNetVersion: '5.x'
+  targetRuntime: 'linux-x64'
   azureSubscription: 'dotnetcoreserviceconnection'
 
 stages:
