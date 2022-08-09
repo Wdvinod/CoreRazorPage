@@ -15,7 +15,7 @@ variables:
   buildConfiguration: 'Release'
   package-version: '1.2.6'
   dotNetFramework: 'net3.1'
-  dotNetVersion: '3.1'
+  dotNetVersion: '3.x'
   targetRuntime: 'linux-x64'
   azureSubscription: 'dotnetcoreserviceconnection'
 
