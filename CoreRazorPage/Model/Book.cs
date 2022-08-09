@@ -15,7 +15,5 @@ namespace CoreRazorPage.Model
 
         public string Author { get; set; }
         public string ISBN { get; set; }
-
-        public DateTime Date { get; set; } = DateTime.Now;
     }
 }
