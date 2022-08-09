@@ -1,0 +1,45 @@
+﻿var dataTable;
+$(document).ready(function () {
+    loadDataTable();
+});
+
+function loadDataTable() {
+    dataTable = $('#dt_load').DataTable({
+        "ajax": {
+            "url": "api/book",
+            "type": "GET",
+            "datatype": "json"
+        },
+        "columns": [
+            { "data": "name", "width": "20%" },
+            { "data": "author", "width": "20%" },
+            { "data": "isbn", "width": "20%" },
+            {
+                "data": "id",
+                "render": function (data) {
+                    return '<div class="text-center"> <a href="BookList/Edit?id=' + data + '" class="btn btn-success btn-sm text-white" style="cursor: pointer; width: 100px">Edit</a>'
+                        + ' <a class="btn btn-danger  text-white" style="cursor:pointer;width:100px" onclick="Delete()">Delete</a></div>';
+                }, "width": "40%"
+            }
+        ],
+        "language": {
+            "emptytable": "No books Avliable"
+        },
+        "width": "100%"
+    });
+}
+function Delete(url) {
+    swal({
+        title: "Are you sure?",
+        text: "Your will not be able to recover this imaginary file!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonClass: "btn-danger",
+        confirmButtonText: "Yes, delete it!",
+        closeOnConfirm: false
+    },
+        function () {
+            swal("Deleted!", "Your imaginary file has been deleted.", "success");
+        });
+}
+
