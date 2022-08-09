@@ -17,7 +17,7 @@ variables:
   dotNetFramework: 'net3.1'
   dotNetVersion: '3.1'
   targetRuntime: 'linux-x64'
-  azureSubscription: 'wdvinod'
+  azureSubscription: 'dotnetcoreserviceconnection'
 
 stages:
 - stage: Build
