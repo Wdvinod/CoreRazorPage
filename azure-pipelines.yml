@@ -79,7 +79,7 @@ stages:
           command: publish
           publishWebProjects: false
           projects: '**/*.csproj'
-          arguments:  '-c $(Build.Configuration) -o $(Build.ArtifactStagingDirectory) --no-restore'
+          arguments:  '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) --no-restore'
           zipAfterPublish: True
 
       # Package the file and uploads them as an artifact of the build
