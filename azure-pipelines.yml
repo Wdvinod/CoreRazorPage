@@ -26,6 +26,15 @@ stages:
     - job: build
      
       steps:
+      
+      - task: UseDotNet@2
+        displayName: 'Use .NET 6 sdk'
+        inputs:
+          packageType: 'Runtime'
+          version: $(dotNetVersion)
+          includePreviewVersions: true
+          installationPath: $(Agent.ToolsDirectory)/dotnet
+
       - task: UseDotNet@2
         displayName: 'Use .NET 6 sdk'
         inputs:
@@ -40,12 +49,6 @@ stages:
           projects: '**/*.sln'
           arguments: '--configuration $(buildConfiguration)'
 
-  #    - task: DotNetCoreCLI@2
-     #   displayName: Run unit tests
-      #  inputs:
-    #      command: 'test'
-       #   projects: '**/*Tests/*.csproj'
-      #    arguments: '--configuration $(buildConfiguration)'
         
         
 - stage: Development
