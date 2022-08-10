@@ -93,7 +93,7 @@ stages:
       - task: AzureWebApp@1
         inputs:
           azureSubscription: $(azureSubscription)
-          appType: webAppLinux
+          appType: webApp
           appName: 'dotnetwebappkumara'
           package: '$(Pipeline.Workspace)/**/*.zip'
       
