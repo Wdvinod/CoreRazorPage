@@ -15,5 +15,6 @@ namespace CoreRazorPage.Model
 
         public string Author { get; set; }
         public string ISBN { get; set; }
+        public string Publisher { get; set; }
     }
 }
