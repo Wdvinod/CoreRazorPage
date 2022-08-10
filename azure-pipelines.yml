@@ -17,7 +17,7 @@ variables:
   dotNetFramework: 'net3.1'
   dotNetVersion: '3.1.x'
   targetRuntime: 'linux-x64'
-  azureSubscription: 'dotnetcoreserviceconnection'
+  azureSubscription: 'RazorcodeARMConnection'
 
 stages:
 - stage: Build
